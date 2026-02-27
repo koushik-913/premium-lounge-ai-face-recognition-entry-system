@@ -1,0 +1,96 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-refine-the-overall-visual-design-to-more-closely-reflect-the-premium-airline-aesthetic-of-carriers-like-qatar-airways-this-includes-increasing-section-vertical-padding-and-whitespace-for-a-more-spacious-luxurious-feel-upgrading-typography-weight-and-letter-spacing-on-headings-for-an-upscale-editorial-look-adding-subtle-warm-undertones-e-g-soft-champagne-gold-accent-alongside-the-existing-primary-blue-to-borders-dividers-or-section-separators-to-evoke-premium-airline-branding-ensuring-all-cards-use-consistent-refined-box-shadows-and-slightly-increased-border-radius-and-polishing-the-hero-section-overlay-fonts-and-layout-to-feel-on-par-with-a-premium-airline-homepage-hero",
+      "featureTitle": "Refine the overall visual design to more closely reflect the premium airline aesthetic of carriers like Qatar Airways. This includes: increasing section vertical padding and whitespace for a more spacious, luxurious feel; upgrading typography weight and letter-spacing on headings for an upscale editorial look; adding subtle warm undertones (e.g., soft champagne/gold accent alongside the existing primary blue) to borders, dividers, or section separators to evoke premium airline branding; ensuring all cards use consistent refined box shadows and slightly increased border-radius; and polishing the hero section overlay, fonts, and layout to feel on par with a premium airline homepage hero.",
+      "files": [
+        "frontend/src/components/sections/AIProcessingSection.tsx",
+        "frontend/src/components/sections/AccessAuthorizationSection.tsx",
+        "frontend/src/components/sections/FaceDetectionSection.tsx",
+        "frontend/src/components/sections/VerificationResultSection.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/EntryLogs.tsx",
+        "frontend/src/pages/MemberManagement.tsx",
+        "frontend/src/pages/SecuritySystemStatus.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-redesign-the-top-navigation-bar-to-match-the-premium-airline-style-use-a-slim-elegant-bar-with-generous-horizontal-padding-display-the-logo-brand-name-using-a-refined-serif-or-semi-bold-sans-serif-font-apply-a-thin-bottom-border-in-a-subtle-gold-or-light-grey-tone-ensure-nav-links-use-slightly-spaced-uppercase-or-small-caps-styling-with-a-clean-underline-or-dot-indicator-on-the-active-link-and-remove-any-visual-clutter-so-only-the-four-links-live-entry-member-management-entry-logs-security-system-status-are-present",
+      "featureTitle": "Redesign the top navigation bar to match the premium airline style: use a slim, elegant bar with generous horizontal padding; display the logo/brand name using a refined serif or semi-bold sans-serif font; apply a thin bottom border in a subtle gold or light grey tone; ensure nav links use slightly spaced uppercase or small-caps styling with a clean underline or dot indicator on the active link; and remove any visual clutter so only the four links ('Live Entry', 'Member Management', 'Entry Logs', 'Security & System Status') are present.",
+      "files": [
+        "frontend/src/components/Navbar.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-polish-the-hero-section-introductionsection-to-more-closely-resemble-a-premium-airline-homepage-hero-ensure-the-lounge-background-image-fills-the-full-viewport-height-with-a-refined-gradient-overlay-dark-at-bottom-lighter-at-top-rather-than-a-flat-overlay-position-the-headline-premium-lounge-ai-face-recognition-entry-system-in-large-bold-elegant-typography-min-3-5rem-on-desktop-add-a-short-professional-tagline-below-it-include-one-clean-call-to-action-button-with-airline-style-outline-or-solid-styling-and-add-a-subtle-animated-scroll-down-chevron-at-the-bottom-center",
+      "featureTitle": "Polish the hero section (IntroductionSection) to more closely resemble a premium airline homepage hero: ensure the lounge background image fills the full viewport height with a refined gradient overlay (dark at bottom, lighter at top) rather than a flat overlay; position the headline 'Premium Lounge AI – Face Recognition Entry System' in large, bold, elegant typography (min 3.5rem on desktop); add a short professional tagline below it; include one clean call-to-action button with airline-style outline or solid styling; and add a subtle animated scroll-down chevron at the bottom center.",
+      "files": [
+        "frontend/src/components/sections/IntroductionSection.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-improve-the-scroll-driven-workflow-sections-face-detection-ai-processing-verification-result-access-authorization-to-feel-like-a-guided-premium-product-walkthrough-add-section-labels-eyebrow-text-e-g-stage-01-face-detection-in-small-caps-or-uppercase-tracking-above-each-section-heading-ensure-consistent-section-structure-with-a-left-aligned-or-centered-headline-a-short-descriptor-paragraph-and-the-main-content-block-below-apply-entrance-animations-fade-in-subtle-upward-slide-with-staggered-delays-so-content-elements-within-each-section-animate-in-sequence-rather-than-all-at-once",
+      "featureTitle": "Improve the scroll-driven workflow sections (Face Detection, AI Processing, Verification Result, Access Authorization) to feel like a guided premium product walkthrough: add section labels/eyebrow text (e.g., 'STAGE 01 — FACE DETECTION') in small caps or uppercase tracking above each section heading; ensure consistent section structure with a left-aligned or centered headline, a short descriptor paragraph, and the main content block below; apply entrance animations (fade-in + subtle upward slide) with staggered delays so content elements within each section animate in sequence rather than all at once.",
+      "files": [
+        "frontend/src/components/sections/AIProcessingSection.tsx",
+        "frontend/src/components/sections/AccessAuthorizationSection.tsx",
+        "frontend/src/components/sections/FaceDetectionSection.tsx",
+        "frontend/src/components/sections/IntroductionSection.tsx",
+        "frontend/src/components/sections/VerificationResultSection.tsx",
+        "frontend/src/hooks/useScrollAnimation.ts",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

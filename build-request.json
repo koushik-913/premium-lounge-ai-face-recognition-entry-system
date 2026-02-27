@@ -1,0 +1,118 @@
+{
+  "kind": "build_request",
+  "title": "Redesign UI with Premium Airline Visual Style (Qatar Airways-inspired)",
+  "projectName": "Premium Lounge AI",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "text": "Refine the overall visual design to more closely reflect the premium airline aesthetic of carriers like Qatar Airways. This includes: increasing section vertical padding and whitespace for a more spacious, luxurious feel; upgrading typography weight and letter-spacing on headings for an upscale editorial look; adding subtle warm undertones (e.g., soft champagne/gold accent alongside the existing primary blue) to borders, dividers, or section separators to evoke premium airline branding; ensuring all cards use consistent refined box shadows and slightly increased border-radius; and polishing the hero section overlay, fonts, and layout to feel on par with a premium airline homepage hero.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Build a clean, elegant, and easy-to-understand web interface that looks like a real airport-grade application.",
+          "The interface should feel calm, premium, and trustworthy.",
+          "Elegant airline-style layout",
+          "Spacious sections with strong alignment",
+          "Subtle shadows and soft depth effects"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Sections have generous vertical padding (min 96px top/bottom) giving a spacious, airy feel",
+        "Headings use refined letter-spacing and font-weight consistent with premium airline branding",
+        "A subtle gold/champagne accent color is applied to decorative dividers or section separators",
+        "All cards share consistent box-shadow depth and border-radius values",
+        "The hero section visually competes in quality with a premium airline homepage banner"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Redesign the top navigation bar to match the premium airline style: use a slim, elegant bar with generous horizontal padding; display the logo/brand name using a refined serif or semi-bold sans-serif font; apply a thin bottom border in a subtle gold or light grey tone; ensure nav links use slightly spaced uppercase or small-caps styling with a clean underline or dot indicator on the active link; and remove any visual clutter so only the four links ('Live Entry', 'Member Management', 'Entry Logs', 'Security & System Status') are present.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Create a simple top navigation bar containing ONLY: Live Entry, Member Management, Entry Logs, Security & System Status",
+          "Do NOT add extra buttons such as booking, offers, flights, login, or travel-related features."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navbar contains exactly four navigation links with no additional buttons",
+        "Nav links are styled with refined uppercase or spaced lettering",
+        "Active nav link is clearly indicated with an underline or dot accent",
+        "Navbar has a thin decorative bottom border and generous horizontal padding",
+        "No booking, login, travel, or unrelated links are present"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Polish the hero section (IntroductionSection) to more closely resemble a premium airline homepage hero: ensure the lounge background image fills the full viewport height with a refined gradient overlay (dark at bottom, lighter at top) rather than a flat overlay; position the headline 'Premium Lounge AI – Face Recognition Entry System' in large, bold, elegant typography (min 3.5rem on desktop); add a short professional tagline below it; include one clean call-to-action button with airline-style outline or solid styling; and add a subtle animated scroll-down chevron at the bottom center.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Large clean banner layout",
+          "Title: 'Premium Lounge AI – Face Recognition Entry System'",
+          "Airport lounge themed background",
+          "Short professional description"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section fills full viewport height with the lounge background image",
+        "A gradient overlay is used (not a flat semi-transparent layer)",
+        "Headline font size is at least 3.5rem on desktop",
+        "A professional tagline is displayed below the headline",
+        "A scroll-down chevron animation is visible at the bottom center of the hero"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Improve the scroll-driven workflow sections (Face Detection, AI Processing, Verification Result, Access Authorization) to feel like a guided premium product walkthrough: add section labels/eyebrow text (e.g., 'STAGE 01 — FACE DETECTION') in small caps or uppercase tracking above each section heading; ensure consistent section structure with a left-aligned or centered headline, a short descriptor paragraph, and the main content block below; apply entrance animations (fade-in + subtle upward slide) with staggered delays so content elements within each section animate in sequence rather than all at once.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Scrolling should smoothly reveal sections similar to a premium airline homepage.",
+          "Smooth scrolling transitions",
+          "Minimal animations",
+          "The website should look like a real airport software system inspired by premium airline websites"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each workflow section has an eyebrow/stage label (e.g., 'STAGE 01 — FACE DETECTION') above the section title",
+        "Section headings and descriptor paragraphs are consistently structured across all five sections",
+        "Entrance animations use staggered delays so elements animate in sequence within each section",
+        "Animations are smooth and minimal — no excessive bouncing or heavy effects",
+        "All five workflow sections feel cohesive and part of a unified guided walkthrough"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not alter immutable frontend paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui",
+    "Navigation bar must contain only the four existing links: Live Entry, Member Management, Entry Logs, Security & System Status — no additional navigation items",
+    "Do not add booking, travel, flight, login, or unrelated airline features",
+    "All existing mock data and page functionality must be preserved"
+  ],
+  "nonGoals": [
+    "Adding real face recognition or AI backend functionality",
+    "Integrating live camera feeds",
+    "Adding new navigation pages beyond the existing four",
+    "Implementing authentication or user login flows",
+    "Changing the backend Motoko actor"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Photorealistic premium airport lounge interior with warm lighting, plush seating, large windows with runway view, and a calm upscale atmosphere (lounge-hero.dim_1920x1080.jpg)"
+    ],
+    "edits": []
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Redesign UI with Premium Airline Visual Style (Qatar Airways-inspired)",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "summary": "Refine overall visual design to reflect premium airline aesthetic with increased spacing, upgraded typography, warm gold accents, consistent card styling, and polished hero section",
+      "acceptanceCriteria": [
+        "Sections have generous vertical padding (min 96px top/bottom) giving a spacious, airy feel",
+        "Headings use refined letter-spacing and font-weight consistent with premium airline branding",
+        "A subtle gold/champagne accent color is applied to decorative dividers or section separators",
+        "All cards share consistent box-shadow depth and border-radius values",
+        "The hero section visually competes in quality with a premium airline homepage banner"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add champagne/gold accent color CSS variables (--accent-gold: oklch(...)) to the :root definition alongside existing primary blue. Update section spacing utilities to include generous vertical padding classes (py-24, py-32). Define refined heading typography styles with increased letter-spacing and font-weight. Add consistent card styling utilities with refined box-shadow depth and border-radius values. Ensure all new design tokens follow the existing OKLCH color system."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend the theme to include the new accent-gold color mapping from CSS variables. Add refined box-shadow scale values for premium card depth. Extend border-radius scale with slightly increased values for cards. Ensure extended spacing scale supports generous section padding (min 96px)."
+        },
+        {
+          "path": "frontend/src/components/sections/FaceDetectionSection.tsx",
+          "operation": "modify",
+          "description": "Apply generous vertical padding (py-24 or py-32) to the section container. Update section heading typography to use refined letter-spacing and font-weight. Add a subtle gold decorative divider or border element at the top or bottom of the section. Update card styling to use the new consistent box-shadow and border-radius values from the design system."
+        },
+        {
+          "path": "frontend/src/components/sections/AIProcessingSection.tsx",
+          "operation": "modify",
+          "description": "Apply generous vertical padding (py-24 or py-32) to the section container. Update section heading typography to use refined letter-spacing and font-weight. Add a subtle gold decorative divider or border element. Update all processing step cards to use the new consistent box-shadow and border-radius values."
+        },
+        {
+          "path": "frontend/src/components/sections/VerificationResultSection.tsx",
+          "operation": "modify",
+          "description": "Apply generous vertical padding (py-24 or py-32) to the section container. Update section heading typography to use refined letter-spacing and font-weight. Add a subtle gold decorative divider or border element. Update the passenger info card to use the new consistent box-shadow and border-radius values."
+        },
+        {
+          "path": "frontend/src/components/sections/AccessAuthorizationSection.tsx",
+          "operation": "modify",
+          "description": "Apply generous vertical padding (py-24 or py-32) to the section container. Update section heading typography to use refined letter-spacing and font-weight. Add a subtle gold decorative divider or border element. Update gate status cards and entry log badge to use the new consistent box-shadow and border-radius values."
+        },
+        {
+          "path": "frontend/src/pages/MemberManagement.tsx",
+          "operation": "modify",
+          "description": "Apply generous vertical padding to the page container. Update page heading typography to use refined letter-spacing and font-weight. Update the member table and add member dialog card styling to use the new consistent box-shadow and border-radius values."
+        },
+        {
+          "path": "frontend/src/pages/EntryLogs.tsx",
+          "operation": "modify",
+          "description": "Apply generous vertical padding to the page container. Update page heading typography to use refined letter-spacing and font-weight. Update the entry logs table card styling to use the new consistent box-shadow and border-radius values."
+        },
+        {
+          "path": "frontend/src/pages/SecuritySystemStatus.tsx",
+          "operation": "modify",
+          "description": "Apply generous vertical padding to the page container. Update page heading typography to use refined letter-spacing and font-weight. Update all status cards and chart container to use the new consistent box-shadow and border-radius values."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Redesign top navigation bar to match premium airline style with slim elegant design, refined typography, subtle gold border, spaced uppercase nav links, and active link indicators",
+      "acceptanceCriteria": [
+        "Navbar contains exactly four navigation links with no additional buttons",
+        "Nav links are styled with refined uppercase or spaced lettering",
+        "Active nav link is clearly indicated with an underline or dot accent",
+        "Navbar has a thin decorative bottom border and generous horizontal padding",
+        "No booking, login, travel, or unrelated links are present"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "modify",
+          "description": "Transform the navbar into a slim, elegant bar with generous horizontal padding (px-8 or px-12). Update the logo/brand name to use a refined serif or semi-bold sans-serif font with appropriate sizing. Apply a thin bottom border using the subtle gold accent color or light grey tone. Style nav links with uppercase or small-caps lettering and increased letter-spacing for premium feel. Add a clean underline or dot indicator for the active link using the gold accent. Ensure the navbar maintains the existing four links (Live Entry, Member Management, Entry Logs, Security & System Status) with no additional buttons. Preserve mobile hamburger menu functionality while applying the same refined styling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Polish hero section to resemble premium airline homepage hero with full viewport height, refined gradient overlay, large elegant typography, professional tagline, clean CTA button, and animated scroll-down chevron",
+      "acceptanceCriteria": [
+        "Hero section fills full viewport height with the lounge background image",
+        "A gradient overlay is used (not a flat semi-transparent layer)",
+        "Headline font size is at least 3.5rem on desktop",
+        "A professional tagline is displayed below the headline",
+        "A scroll-down chevron animation is visible at the bottom center of the hero"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/IntroductionSection.tsx",
+          "operation": "modify",
+          "description": "Update the section to fill full viewport height (min-h-screen or h-screen). Replace the lounge background image with the generated asset at frontend/public/assets/generated/lounge-hero.dim_1920x1080.jpg. Replace any flat semi-transparent overlay with a refined gradient overlay (dark at bottom, lighter at top using gradient-to-t). Increase the headline 'Premium Lounge AI – Face Recognition Entry System' font size to at least 3.5rem on desktop with elegant typography (refined font-weight and letter-spacing). Add a short professional tagline element below the headline (e.g., 'Seamless Access Through Advanced Recognition Technology'). Update the existing CTA button to use airline-style outline or solid styling with the accent-gold color. Add a subtle animated scroll-down chevron at the bottom center of the hero section using CSS animations (bounce or fade effect)."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add keyframe animation for the scroll-down chevron (e.g., @keyframes chevron-bounce with translateY motion). Add utility classes for gradient overlays that transition from dark at bottom to lighter at top. Ensure the animation is smooth and minimal, matching the premium aesthetic."
+        }
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "summary": "Improve scroll-driven workflow sections to feel like a guided premium product walkthrough with stage labels, consistent structure, and staggered entrance animations",
+      "acceptanceCriteria": [
+        "Each workflow section has an eyebrow/stage label (e.g., 'STAGE 01 — FACE DETECTION') above the section title",
+        "Section headings and descriptor paragraphs are consistently structured across all five sections",
+        "Entrance animations use staggered delays so elements animate in sequence within each section",
+        "Animations are smooth and minimal — no excessive bouncing or heavy effects",
+        "All five workflow sections feel cohesive and part of a unified guided walkthrough"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/IntroductionSection.tsx",
+          "operation": "modify",
+          "description": "This is the hero section (not a numbered workflow stage), but ensure it serves as the introduction to the guided walkthrough. Add smooth entrance animation (fade-in) for hero content elements. Ensure the scroll-down chevron properly directs users to the first workflow stage."
+        },
+        {
+          "path": "frontend/src/components/sections/FaceDetectionSection.tsx",
+          "operation": "modify",
+          "description": "Add eyebrow/stage label 'STAGE 01 — FACE DETECTION' above the section heading in small caps or uppercase with increased tracking. Ensure consistent section structure: eyebrow label, section heading with refined typography, short descriptor paragraph, and main content block (camera viewfinder). Apply entrance animations with staggered delays: eyebrow fades in first, then heading, then descriptor, then main content. Use the existing useScrollAnimation hook to trigger animations when section enters viewport. Ensure animations are smooth fade-in with subtle upward slide (translateY), no excessive effects."
+        },
+        {
+          "path": "frontend/src/components/sections/AIProcessingSection.tsx",
+          "operation": "modify",
+          "description": "Add eyebrow/stage label 'STAGE 02 — AI PROCESSING' above the section heading in small caps or uppercase with increased tracking. Ensure consistent section structure: eyebrow label, section heading, short descriptor paragraph, and main content block (processing step cards). Apply entrance animations with staggered delays: eyebrow, heading, descriptor, then each processing card animates in sequence. Use the existing useScrollAnimation hook. Ensure animations are smooth and minimal (fade-in + subtle translateY)."
+        },
+        {
+          "path": "frontend/src/components/sections/VerificationResultSection.tsx",
+          "operation": "modify",
+          "description": "Add eyebrow/stage label 'STAGE 03 — VERIFICATION RESULT' above the section heading in small caps or uppercase with increased tracking. Ensure consistent section structure: eyebrow label, section heading, short descriptor paragraph, and main content block (passenger info card). Apply entrance animations with staggered delays for all elements. Use the existing useScrollAnimation hook. Ensure animations are smooth and minimal."
+        },
+        {
+          "path": "frontend/src/components/sections/AccessAuthorizationSection.tsx",
+          "operation": "modify",
+          "description": "Add eyebrow/stage label 'STAGE 04 — ACCESS AUTHORIZATION' above the section heading in small caps or uppercase with increased tracking. Ensure consistent section structure: eyebrow label, section heading, short descriptor paragraph, and main content block (success checkmark, gate status cards, entry log). Apply entrance animations with staggered delays: eyebrow, heading, descriptor, checkmark, then gate status cards and entry log animate in sequence. Use the existing useScrollAnimation hook. Ensure animations are smooth and minimal."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add utility classes for staggered entrance animations (animation-delay-100, animation-delay-200, etc.). Define fade-in-up animation keyframes that combine opacity transition with subtle translateY upward motion. Ensure all animations are smooth and minimal with appropriate duration (300-500ms) and easing functions (ease-out). Add small-caps or uppercase utility classes for eyebrow labels with increased letter-spacing."
+        },
+        {
+          "path": "frontend/src/hooks/useScrollAnimation.ts",
+          "operation": "modify",
+          "description": "Review and ensure the useScrollAnimation hook properly supports staggered animations within a section. If needed, extend the hook to handle multiple child elements with incremental delays. Ensure the IntersectionObserver threshold and rootMargin values provide smooth trigger timing for the premium walkthrough feel."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: oklch(0.99 0.002 240);
+    --foreground: oklch(0.15 0.015 240);
+
+    --card: oklch(1.0 0.0 0);
+    --card-foreground: oklch(0.15 0.015 240);
+
+    --popover: oklch(1.0 0.0 0);
+    --popover-foreground: oklch(0.15 0.015 240);
+
+    --primary: oklch(0.32 0.06 240);
+    --primary-foreground: oklch(0.98 0.002 240);
+
+    --secondary: oklch(0.96 0.005 240);
+    --secondary-foreground: oklch(0.25 0.03 240);
+
+    --muted: oklch(0.96 0.005 240);
+    --muted-foreground: oklch(0.55 0.02 240);
+
+    --accent: oklch(0.75 0.12 75);
+    --accent-foreground: oklch(0.15 0.03 75);
+
+    --accent-gold: oklch(0.75 0.12 75);
+    --accent-gold-light: oklch(0.92 0.06 75);
+    --accent-gold-dark: oklch(0.55 0.10 75);
+
+    --destructive: oklch(0.55 0.22 25);
+    --destructive-foreground: oklch(0.98 0.005 25);
+
+    --success: oklch(0.52 0.18 145);
+    --success-foreground: oklch(0.98 0.005 145);
+    --success-light: oklch(0.92 0.08 145);
+
+    --alert: oklch(0.55 0.22 25);
+    --alert-foreground: oklch(0.98 0.005 25);
+    --alert-light: oklch(0.94 0.08 25);
+
+    --border: oklch(0.90 0.008 240);
+    --input: oklch(0.90 0.008 240);
+    --ring: oklch(0.32 0.06 240);
+
+    --radius: 0.5rem;
+
+    --navy: oklch(0.22 0.06 240);
+    --navy-light: oklch(0.30 0.06 240);
+    --surface: oklch(0.97 0.003 240);
+    --surface-elevated: oklch(0.99 0.002 240);
+  }
+
+  .dark {
+    --background: oklch(0.12 0.015 240);
+    --foreground: oklch(0.95 0.005 240);
+    --card: oklch(0.16 0.015 240);
+    --card-foreground: oklch(0.95 0.005 240);
+    --popover: oklch(0.16 0.015 240);
+    --popover-foreground: oklch(0.95 0.005 240);
+    --primary: oklch(0.70 0.08 240);
+    --primary-foreground: oklch(0.12 0.015 240);
+    --secondary: oklch(0.22 0.02 240);
+    --secondary-foreground: oklch(0.90 0.005 240);
+    --muted: oklch(0.22 0.02 240);
+    --muted-foreground: oklch(0.65 0.02 240);
+    --accent: oklch(0.75 0.12 75);
+    --accent-foreground: oklch(0.12 0.03 75);
+    --destructive: oklch(0.60 0.22 25);
+    --destructive-foreground: oklch(0.98 0.005 25);
+    --border: oklch(0.28 0.02 240);
+    --input: oklch(0.28 0.02 240);
+    --ring: oklch(0.70 0.08 240);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .section-eyebrow {
+    @apply text-xs font-semibold tracking-[0.25em] uppercase;
+    color: var(--accent-gold);
+    letter-spacing: 0.25em;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-light tracking-tight;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+  }
+
+  .section-descriptor {
+    @apply text-base font-normal leading-relaxed;
+    color: oklch(0.50 0.02 240);
+    max-width: 42ch;
+  }
+
+  .premium-card {
+    @apply bg-white rounded-2xl border border-border;
+    box-shadow: 0 2px 8px oklch(0.15 0.02 240 / 0.06), 0 8px 32px oklch(0.15 0.02 240 / 0.08);
+  }
+
+  .premium-card-elevated {
+    @apply bg-white rounded-2xl border border-border;
+    box-shadow: 0 4px 16px oklch(0.15 0.02 240 / 0.08), 0 16px 48px oklch(0.15 0.02 240 / 0.12);
+  }
+
+  .gold-divider {
+    height: 2px;
+    width: 48px;
+    background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-light));
+    border-radius: 2px;
+  }
+
+  .gold-divider-wide {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+  }
+
+  .nav-link-active {
+    position: relative;
+  }
+
+  .nav-link-active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent-gold);
+    border-radius: 1px;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-up-slow {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-chevron-bounce {
+    animation: chevronBounce 2s ease-in-out infinite;
+  }
+
+  .animate-scan-line {
+    animation: scanLine 2.5s ease-in-out infinite;
+  }
+
+  .animate-pulse-border {
+    animation: pulseBorder 2s ease-in-out infinite;
+  }
+
+  .animate-progress-fill {
+    animation: progressFill 2s ease-out forwards;
+  }
+
+  .animate-checkmark {
+    animation: checkmarkDraw 0.6s ease-out forwards;
+  }
+
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+  .delay-700 { animation-delay: 700ms; }
+  .delay-800 { animation-delay: 800ms; }
+
+  .opacity-0-init {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes chevronBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+@keyframes scanLine {
+  0% { top: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes pulseBorder {
+  0%, 100% { opacity: 0.6; box-shadow: 0 0 0 0 oklch(0.52 0.18 145 / 0.4); }
+  50% { opacity: 1; box-shadow: 0 0 0 8px oklch(0.52 0.18 145 / 0); }
+}
+
+@keyframes progressFill {
+  from { width: 0%; }
+  to { width: var(--progress-width, 100%); }
+}
+
+@keyframes checkmarkDraw {
+  from { stroke-dashoffset: 100; opacity: 0; }
+  to { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}

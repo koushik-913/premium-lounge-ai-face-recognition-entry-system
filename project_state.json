@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Premium Airport Lounge Face Recognition Entry System – a modern, professional web interface inspired by premium airline websites (Qatar Airways aesthetic) with scroll-driven workflow stages (Hero, Face Detection, AI Processing, Verification Result, Access Confirmation), light theme with white/soft grey backgrounds, elegant airline-style layout, spacious sections, professional typography, smooth scrolling transitions, and minimal animations. Navigation contains only: Live Entry, Member Management, Entry Logs, Security & System Status.",
+  "architectural_notes": [
+    "Light theme: white/soft light grey backgrounds, professional blue accent, green for success, red for alerts",
+    "Scroll-driven experience: 5 sections (Introduction, Face Detection, AI Processing, Verification Result, Access Authorization) as guided product walkthrough",
+    "Top navigation bar with: Live Entry, Member Management, Entry Logs, Security & System Status",
+    "Verification result panel shows: Passenger Name, Membership Tier, Confidence Score, Verification Time, and Access Granted/Denied status",
+    "Subtle shadows/elevation for depth; no excessive animations or futuristic effects; responsive layout",
+    "Visual inspiration: premium airline websites (Qatar Airways style) — spacious sections, strong alignment, calm/trustworthy aesthetic; no booking/travel/login features"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Photorealistic premium airport lounge interior with warm lighting, plush seating, large windows with runway view, and a calm upscale atmosphere (lounge-hero.dim_1920x1080.jpg)",
+  "existing_features": [
+    {
+      "id": "feature-implement-a-light-theme-visual-design-system-throughout-the-entire-application-using-white-and-soft-light-grey-f8f9fa-backgrounds-professional-blue-1e3a8a-2563eb-as-the-primary-accent-color-green-16a34a-for-success-states-red-dc2626-for-alert-denied-states-and-neutral-dark-grey-1f2937-for-body-text-apply-clean-sans-serif-typography-inter-or-similar-consistent-spacing-subtle-box-shadows-for-elevation-and-a-minimalistic-layout-that-resembles-enterprise-airport-or-airline-management-software",
+      "title": "Implement a light-theme visual design system throughout the entire application using white and soft light grey (#F8F9FA) backgrounds, professional blue (#1E3A8A / #2563EB) as the primary accent color, green (#16A34A) for success states, red (#DC2626) for alert/denied states, and neutral dark grey (#1F2937) for body text. Apply clean sans-serif typography (Inter or similar), consistent spacing, subtle box shadows for elevation, and a minimalistic layout that resembles enterprise airport or airline management software.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-fixed-top-navigation-bar-with-the-application-name-logo-on-the-left-and-four-navigation-links-on-the-right-live-entry-member-management-entry-logs-and-security-system-status-the-navbar-should-be-white-with-a-bottom-border-shadow-remain-sticky-on-scroll-and-highlight-the-active-section-link",
+      "title": "Create a fixed top navigation bar with the application name/logo on the left and four navigation links on the right: 'Live Entry', 'Member Management', 'Entry Logs', and 'Security & System Status'. The navbar should be white with a bottom border shadow, remain sticky on scroll, and highlight the active section link.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-section-1-introduction-a-full-viewport-height-hero-section-with-the-airport-lounge-background-image-lounge-hero-dim-1920x1080-jpg-as-a-background-a-semi-transparent-overlay-the-title-premium-lounge-ai-face-recognition-entry-system-in-large-bold-text-a-short-system-description-paragraph-e-g-seamlessly-verify-premium-members-with-ai-powered-biometric-recognition-fast-secure-and-contactless-and-a-subtle-scroll-down-indicator-arrow",
+      "title": "Build Section 1 (Introduction): A full-viewport-height hero section with the airport lounge background image (lounge-hero.dim_1920x1080.jpg) as a background, a semi-transparent overlay, the title 'Premium Lounge AI – Face Recognition Entry System' in large bold text, a short system description paragraph (e.g., 'Seamlessly verify premium members with AI-powered biometric recognition — fast, secure, and contactless'), and a subtle scroll-down indicator arrow.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-section-2-face-detection-stage-a-full-height-section-labeled-live-entry-showing-a-camera-interface-layout-centered-on-the-page-render-a-simulated-camera-viewfinder-as-a-large-rounded-rectangle-with-a-subtle-pulsing-blue-border-inside-the-viewfinder-display-a-face-detection-bounding-box-a-rectangular-bracket-overlay-to-simulate-face-tracking-and-a-label-below-reading-detecting-passenger-face-with-a-pulsing-status-dot-the-section-background-should-be-soft-light-grey",
+      "title": "Build Section 2 (Face Detection Stage): A full-height section labeled 'Live Entry' showing a camera interface layout centered on the page. Render a simulated camera viewfinder as a large rounded rectangle with a subtle pulsing blue border. Inside the viewfinder, display a face detection bounding box (a rectangular bracket overlay) to simulate face tracking, and a label below reading 'Detecting Passenger Face' with a pulsing status dot. The section background should be soft light grey.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-section-3-ai-processing-stage-a-full-height-section-showing-a-vertical-workflow-pipeline-with-three-steps-displayed-as-cards-or-steps-1-capturing-image-2-extracting-facial-features-3-matching-with-premium-member-database-each-step-should-have-an-icon-a-step-label-and-a-subtle-horizontal-progress-bar-beneath-it-steps-should-visually-indicate-sequential-progression-e-g-completed-steps-in-blue-green-current-step-with-an-animated-progress-indicator-pending-steps-in-grey",
+      "title": "Build Section 3 (AI Processing Stage): A full-height section showing a vertical workflow pipeline with three steps displayed as cards or steps: (1) 'Capturing Image', (2) 'Extracting Facial Features', (3) 'Matching with Premium Member Database'. Each step should have an icon, a step label, and a subtle horizontal progress bar beneath it. Steps should visually indicate sequential progression (e.g., completed steps in blue/green, current step with an animated progress indicator, pending steps in grey).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-section-4-verification-result-stage-a-full-height-section-displaying-a-passenger-information-panel-as-a-white-card-with-shadow-the-card-must-show-passenger-name-membership-tier-e-g-platinum-gold-confidence-score-e-g-98-7-and-verification-time-e-g-1-2s-below-the-card-display-a-large-status-badge-access-granted-in-green-or-access-denied-in-red-with-a-corresponding-icon-checkmark-or-x-the-demo-should-default-to-showing-access-granted-include-a-toggle-button-to-switch-between-granted-denied-states-for-demonstration-purposes",
+      "title": "Build Section 4 (Verification Result Stage): A full-height section displaying a passenger information panel as a white card with shadow. The card must show: Passenger Name, Membership Tier (e.g., Platinum, Gold), Confidence Score (e.g., 98.7%), and Verification Time (e.g., 1.2s). Below the card, display a large status badge: 'Access Granted' in green or 'Access Denied' in red, with a corresponding icon (checkmark or X). The demo should default to showing 'Access Granted'. Include a toggle button to switch between Granted/Denied states for demonstration purposes.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-section-5-access-authorization-stage-a-full-height-section-with-a-centered-clean-success-layout-display-a-large-green-checkmark-icon-the-confirmation-message-access-authorized-welcome-to-premium-lounge-in-bold-large-text-and-a-secondary-line-such-as-gate-opens-automatically-please-proceed-to-the-lounge-below-show-a-simple-green-entry-logged-badge-and-a-timestamp-background-should-be-white",
+      "title": "Build Section 5 (Access Authorization Stage): A full-height section with a centered, clean success layout. Display a large green checkmark icon, the confirmation message 'Access Authorized – Welcome to Premium Lounge' in bold large text, and a secondary line such as 'Gate opens automatically. Please proceed to the lounge.' Below, show a simple green 'Entry Logged' badge and a timestamp. Background should be white.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-member-management-page-view-accessible-from-the-top-navigation-display-a-searchable-data-table-of-premium-members-with-columns-member-id-name-membership-tier-status-active-suspended-and-last-entry-date-include-mock-data-for-at-least-8-members-add-an-add-member-button-that-opens-a-simple-modal-form-with-fields-for-name-membership-tier-dropdown-and-status",
+      "title": "Build a 'Member Management' page/view accessible from the top navigation. Display a searchable data table of premium members with columns: Member ID, Name, Membership Tier, Status (Active/Suspended), and Last Entry date. Include mock data for at least 8 members. Add an 'Add Member' button that opens a simple modal form with fields for Name, Membership Tier (dropdown), and Status.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-entry-logs-page-view-accessible-from-the-top-navigation-display-a-table-of-recent-entry-events-with-columns-timestamp-passenger-name-membership-tier-confidence-score-and-result-granted-denied-results-should-be-color-coded-green-red-include-at-least-10-mock-log-entries-add-a-date-range-filter-and-a-result-filter-all-granted-denied",
+      "title": "Build an 'Entry Logs' page/view accessible from the top navigation. Display a table of recent entry events with columns: Timestamp, Passenger Name, Membership Tier, Confidence Score, and Result (Granted/Denied). Results should be color-coded green/red. Include at least 10 mock log entries. Add a date-range filter and a result filter (All / Granted / Denied).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-security-system-status-page-view-accessible-from-the-top-navigation-display-a-status-dashboard-with-1-system-health-cards-for-camera-feed-ai-engine-and-database-connection-each-showing-an-online-green-or-offline-red-status-badge-2-key-metrics-total-entries-today-granted-count-denied-count-average-confidence-score-3-a-simple-bar-or-metric-card-showing-peak-entry-times-use-mock-static-data",
+      "title": "Build a 'Security & System Status' page/view accessible from the top navigation. Display a status dashboard with: (1) System Health cards for Camera Feed, AI Engine, and Database Connection, each showing an 'Online' (green) or 'Offline' (red) status badge; (2) Key metrics: Total Entries Today, Granted Count, Denied Count, Average Confidence Score; (3) A simple bar or metric card showing peak entry times. Use mock static data.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-scroll-driven-section-transitions-on-the-main-scroll-page-live-entry-workflow-as-the-user-scrolls-through-sections-1-5-each-section-should-smoothly-animate-into-view-fade-in-subtle-upward-slide-use-intersection-observer-api-or-a-scroll-library-to-trigger-entrance-animations-transitions-must-be-smooth-and-professional-no-abrupt-jumps-no-excessive-effects-scroll-progress-through-the-workflow-sections-should-feel-like-a-guided-product-walkthrough",
+      "title": "Implement scroll-driven section transitions on the main scroll page (Live Entry workflow). As the user scrolls through Sections 1–5, each section should smoothly animate into view (fade-in + subtle upward slide). Use Intersection Observer API or a scroll library to trigger entrance animations. Transitions must be smooth and professional — no abrupt jumps, no excessive effects. Scroll progress through the workflow sections should feel like a guided product walkthrough.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-entire-interface-is-fully-responsive-the-navigation-bar-should-collapse-into-a-hamburger-menu-on-mobile-viewports-all-section-layouts-viewfinder-workflow-steps-verification-card-tables-must-reflow-gracefully-on-tablet-and-mobile-screen-widths-font-sizes-should-scale-appropriately",
+      "title": "Ensure the entire interface is fully responsive. The navigation bar should collapse into a hamburger menu on mobile viewports. All section layouts (viewfinder, workflow steps, verification card, tables) must reflow gracefully on tablet and mobile screen widths. Font sizes should scale appropriately.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-refine-the-overall-visual-design-to-more-closely-reflect-the-premium-airline-aesthetic-of-carriers-like-qatar-airways-this-includes-increasing-section-vertical-padding-and-whitespace-for-a-more-spacious-luxurious-feel-upgrading-typography-weight-and-letter-spacing-on-headings-for-an-upscale-editorial-look-adding-subtle-warm-undertones-e-g-soft-champagne-gold-accent-alongside-the-existing-primary-blue-to-borders-dividers-or-section-separators-to-evoke-premium-airline-branding-ensuring-all-cards-use-consistent-refined-box-shadows-and-slightly-increased-border-radius-and-polishing-the-hero-section-overlay-fonts-and-layout-to-feel-on-par-with-a-premium-airline-homepage-hero",
+      "title": "Refine the overall visual design to more closely reflect the premium airline aesthetic of carriers like Qatar Airways. This includes: increasing section vertical padding and whitespace for a more spacious, luxurious feel; upgrading typography weight and letter-spacing on headings for an upscale editorial look; adding subtle warm undertones (e.g., soft champagne/gold accent alongside the existing primary blue) to borders, dividers, or section separators to evoke premium airline branding; ensuring all cards use consistent refined box shadows and slightly increased border-radius; and polishing the hero section overlay, fonts, and layout to feel on par with a premium airline homepage hero.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-top-navigation-bar-to-match-the-premium-airline-style-use-a-slim-elegant-bar-with-generous-horizontal-padding-display-the-logo-brand-name-using-a-refined-serif-or-semi-bold-sans-serif-font-apply-a-thin-bottom-border-in-a-subtle-gold-or-light-grey-tone-ensure-nav-links-use-slightly-spaced-uppercase-or-small-caps-styling-with-a-clean-underline-or-dot-indicator-on-the-active-link-and-remove-any-visual-clutter-so-only-the-four-links-live-entry-member-management-entry-logs-security-system-status-are-present",
+      "title": "Redesign the top navigation bar to match the premium airline style: use a slim, elegant bar with generous horizontal padding; display the logo/brand name using a refined serif or semi-bold sans-serif font; apply a thin bottom border in a subtle gold or light grey tone; ensure nav links use slightly spaced uppercase or small-caps styling with a clean underline or dot indicator on the active link; and remove any visual clutter so only the four links ('Live Entry', 'Member Management', 'Entry Logs', 'Security & System Status') are present.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-polish-the-hero-section-introductionsection-to-more-closely-resemble-a-premium-airline-homepage-hero-ensure-the-lounge-background-image-fills-the-full-viewport-height-with-a-refined-gradient-overlay-dark-at-bottom-lighter-at-top-rather-than-a-flat-overlay-position-the-headline-premium-lounge-ai-face-recognition-entry-system-in-large-bold-elegant-typography-min-3-5rem-on-desktop-add-a-short-professional-tagline-below-it-include-one-clean-call-to-action-button-with-airline-style-outline-or-solid-styling-and-add-a-subtle-animated-scroll-down-chevron-at-the-bottom-center",
+      "title": "Polish the hero section (IntroductionSection) to more closely resemble a premium airline homepage hero: ensure the lounge background image fills the full viewport height with a refined gradient overlay (dark at bottom, lighter at top) rather than a flat overlay; position the headline 'Premium Lounge AI – Face Recognition Entry System' in large, bold, elegant typography (min 3.5rem on desktop); add a short professional tagline below it; include one clean call-to-action button with airline-style outline or solid styling; and add a subtle animated scroll-down chevron at the bottom center.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-improve-the-scroll-driven-workflow-sections-face-detection-ai-processing-verification-result-access-authorization-to-feel-like-a-guided-premium-product-walkthrough-add-section-labels-eyebrow-text-e-g-stage-01-face-detection-in-small-caps-or-uppercase-tracking-above-each-section-heading-ensure-consistent-section-structure-with-a-left-aligned-or-centered-headline-a-short-descriptor-paragraph-and-the-main-content-block-below-apply-entrance-animations-fade-in-subtle-upward-slide-with-staggered-delays-so-content-elements-within-each-section-animate-in-sequence-rather-than-all-at-once",
+      "title": "Improve the scroll-driven workflow sections (Face Detection, AI Processing, Verification Result, Access Authorization) to feel like a guided premium product walkthrough: add section labels/eyebrow text (e.g., 'STAGE 01 — FACE DETECTION') in small caps or uppercase tracking above each section heading; ensure consistent section structure with a left-aligned or centered headline, a short descriptor paragraph, and the main content block below; apply entrance animations (fade-in + subtle upward slide) with staggered delays so content elements within each section animate in sequence rather than all at once.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [],
+  "gameProjectType": "none",
+  "projectName": "Premium Lounge AI – Face Recognition Entry System",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
